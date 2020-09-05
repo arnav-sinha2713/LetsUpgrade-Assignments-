@@ -1,0 +1,11 @@
+num=1042000
+while num<=702648265:
+    a=num
+    sum=0
+    while a>0:
+        d=a%10
+        sum+=d*d*d
+        a=a//10
+    if sum==num:
+        print(num)
+        break
