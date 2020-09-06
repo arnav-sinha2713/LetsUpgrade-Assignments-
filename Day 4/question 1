@@ -1,11 +1,14 @@
-num=1042000
-while num<=702648265:
-    a=num
+l=1042000
+u=702648265
+while l<=u:
+    order=len(str(l))
     sum=0
+    a=l
     while a>0:
         d=a%10
-        sum+=d*d*d
-        a=a//10
-    if sum==num:
-        print(num)
+        sum+=d**order
+        a//=10
+    if l==sum:
+        print(l)
         break
+    l+=1
